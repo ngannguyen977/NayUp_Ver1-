@@ -12,21 +12,19 @@
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="mainScript.js"></script>
     
 </head>
 <body>
 <header>
     <div class="container">
         <nav class="fixtop navbar navbar-default" role="navigation">
-            <div class="container">
+            <div class="nav-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <!-- <img src="images/icon/menu.svg" alt=""> -->
                     </button>
-                    <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+                    <a class="navbar-brand" href="#"><img class="img-responsive" src="images/logo.png"></a>
                 </div>
                 <div class="navbar-fixed collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
@@ -39,15 +37,23 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav> <!-- /nav -->
+        <div class="clearfix"></div>
     </div>
 </header>
-<section class="video-bg">
-    <div class="container">
-        <video width="100%" height="400" controls autoplay poster="images/video-bg.jpg">
-            <source src="movie.mp4" type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-        </video>
-    </div>
+<section id="banner-main">
+    
+        <div class="banner-wrapper">
+            <a href="">
+                <span class="video-button">
+                    <img src="images/icon/play-arrow.svg" alt="">
+                </span>
+            </a>
+            <div class="banner-text">
+                <p >Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    
 </section>
 <section id="features">
     <div class="container">
@@ -59,7 +65,7 @@
                 <p>Q&A<br/>
                 Agenda<br>
                 Insighs<br>
-                <span>Custom<br>Branding</span>
+                <span>Custom<br>Branding</span><br>
                 Security<br>
                 Signing in
                 </p>
@@ -67,7 +73,7 @@
             <div class="features-col-middle col-md-5 col-sm-5">
                 <div class="text-content">
                     <p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae </p>
-                    <p>faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae duis metus et, vestibulum phasellus velit magnis.</p>
+                    <p>faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae duis metus et, vestibulum phasellus velit magnis <a href="">more infomation</a></p>
                 </div>
             </div>
             <div class="features-col-right col-md-5 col-sm-5">
@@ -87,12 +93,12 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <ul>
-                    <li>. Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla,.</li>
-                    <li>. vestibulum phasellus velit magnis.  </li>
-                    <li>. nam magna, mauris interdum feugiat nunc fringilla, . </li>
-                    <li>. Ipsum amet in nam magna, </li>
-                    <li>. vestibulum phasellus velit magnis.  </li>
-                    <li>. nam magna, mauris interdum feugiat nunc fringilla, . </li>
+                    <li><p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla,.</p></li>
+                    <li><p>vestibulum phasellus velit magnis.  </p></li>
+                    <li><p>nam magna, mauris interdum feugiat nunc fringilla, . </p></li>
+                    <li><p>Ipsum amet in nam magna, </p></li>
+                    <li><p>vestibulum phasellus velit magnis.  </p></li>
+                    <li><p>nam magna, mauris interdum feugiat nunc fringilla, . </p></li>
                 </ul>
             </div>
         </div>
@@ -104,8 +110,8 @@
             <h2 class="mrgbottom60">Where to use nayup</h2>
         </div>
         <div class="content-section">
-            <div class="where-list col-md-8 col-sm-8">
-                <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="nopadding where-list col-md-8 col-sm-8 col-xs-12">
+                <div class="list-col col-md-6 col-sm-6">
                     <ul>
                         <li>Public Forums</li>
                         <li>Seminars</li>
@@ -113,7 +119,7 @@
                         <li>Industry Conferences</li>
                     </ul>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="list-col col-md-6 col-sm-6">
                     <ul>
                         <li>Town Halls</li>
                         <li>Staff Meetings</li>
@@ -122,8 +128,12 @@
                     </ul>
                 </div>  
             </div>
-            <div class="col-md-4 col-sm-4">
-                <img class="img-responsive" src="images/use.jpg" alt="img-use">
+            <div class="nopadding col-md-4 col-sm-4 col-xs-12">
+                <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+                        <source src="video/Pigeon.webm" type="video/webm"/>
+                        <source src="video/Pigeon.ogv" type="video/ogg ogv"; codecs="theora, vorbis"/>
+                        <source src="video/Pigeon.mp4" type="video/mp4"/>
+                </video>
             </div>
         </div>
     </div>
@@ -134,8 +144,15 @@
             <h2 class="mrgbottom60">nayup has already used at</h2>
         </div>
         <div class="content-section">
-            <div class="">
-                <img class="img-responsive" src="images/QA.jpg" alt="img-QA">
+            <div class="qa-content">
+                <div class="qa-content-left col-md-5"><img class="img-responsive" src="images/QA/man.png" alt="qa-img" /></div>
+                <div class="qa-content-right col-md-7">
+                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa1.jpg" alt="qa-img" /></div>
+                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa2.jpg" alt="qa-img" /></div>
+                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa3.jpg" alt="qa-img" /></div>
+                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa4.jpg" alt="qa-img" /></div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -150,31 +167,31 @@
 <footer>
    <div class="footer-content">
         <div class="footer-top">
-           <div class="col-md-3 col-sm-3">
+           <div class="nopadding col-md-3 col-sm-3">
                <ul>
-                   <li>Features</li>
-                   <li>Pricing</li>
-                   <li>Stories</li>
-                   <li>Sign Up</li>
-                   <li>Login</li>
+                   <li><a href="">ABOUT US</a></li>
+                   <li><a href="">OUR CLIENTS</a></li>
+                   <li><a href="">CONTACT US</a></li>
+                   <li><a href="">OUR BLOG</a></li>
+                   <li><a href="">JOB</a></li>
                </ul>
            </div>
-           <div class="col-md-3 col-sm-3">
+           <div class="nopadding col-md-3 col-sm-3">
                <ul>
-                   <li>Features</li>
-                   <li>Pricing</li>
-                   <li>Stories</li>
-                   <li>Sign Up</li>
-                   <li>Login</li>
+                   <li><a href="">FEATURES</a></li>
+                   <li><a href="">GETTING STARTED</a></li>
+                   <li><a href="">PRICING</a></li>
+                   <li><a href="">INTERACTIVE DEMO</a></li>
+                   <li><a href="">SUPPORTED DEVICES</a></li>
+                    <li><a href="">KNOWLEDGE BASE</a></li>
                </ul>
            </div>
-           <div class="col-md-3 col-sm-3">
-               <h3>Follow us on</h3>
+           <div class="nopadding col-md-3 col-sm-3">
+                <p>PHONE: (+84) 871 099 909</p>
+                <p class="email-link">Email: <a href="">info@hracademy.edu.vn</a></p>
            </div>
-           <div class="col-md-3 col-sm-3">
-               <p>Address: 68 Nguyen Hue Street, District 1, 
-                Ho Chi Minh City, Vietnam</p>
-                <p>Phone: (+84) 871 099 909</p>
+           <div class="nopadding col-md-3 col-sm-3">
+               <p>FOLLOW US ON</p>
            </div>
            <div class="clearfix"></div>
         </div>
