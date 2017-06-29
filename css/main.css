@@ -250,7 +250,13 @@ width: 100%;
 
 	background-color:#eb960c;
 }
+.os-animation{
+  opacity: 0;
+}
 
+.os-animation.animated{
+    opacity: 1;
+}
 /*====================FOOTER=======================*/
 footer{
 	font-size: 14px;

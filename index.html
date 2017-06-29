@@ -8,14 +8,48 @@
     
     <link rel="stylesheet" href="font/flaticon.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="mainScript.js"></script>
-    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+    <script type="text/javascript">//<![CDATA[ 
+        $(function(){
+            function onScrollInit( items, trigger ) {
+                items.each( function() {
+                var osElement = $(this),
+                    osAnimationClass = osElement.attr('data-os-animation'),
+                    osAnimationDelay = osElement.attr('data-os-animation-delay');
+                  
+                    osElement.css({
+                        '-webkit-animation-delay':  osAnimationDelay,
+                        '-moz-animation-delay':     osAnimationDelay,
+                        'animation-delay':          osAnimationDelay
+                    });
+                    var osTrigger = ( trigger ) ? trigger : osElement;
+                    
+                    osTrigger.waypoint(function() {
+                        osElement.addClass('animated').addClass(osAnimationClass);
+                        },{
+                            triggerOnce: true,
+                            offset: '90%'
+                    });
+                });
+            }
+            onScrollInit( $('.os-animation') );
+            onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
+        });//]]>  
+        // $(window).on('scroll', function(){
+        //     var scrolling = false;
+        //     if(!scrolling){
+        //         onScrollInit( $('.os-animation') );
+        //         scrolling = true;
+        //     }
+        // });
+    </script>
+        
 </head>
-<body>
+<body class="staggered-animation-container">
 <header>
     <div class="container">
         <nav class="fixtop navbar navbar-default" role="navigation">
@@ -41,19 +75,17 @@
     </div>
 </header>
 <section id="banner-main">
-    
-        <div class="banner-wrapper">
-            <a href="">
-                <span class="video-button">
-                    <img src="images/icon/play-arrow.svg" alt="">
-                </span>
-            </a>
-            <div class="banner-text">
-                <p >Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
-            </div>
-            <div class="clearfix"></div>
+    <div class="banner-wrapper">
+        <a href="">
+            <span class="video-button">
+                <img src="images/icon/play-arrow.svg" alt="">
+            </span>
+        </a>
+        <div class="banner-text">
+            <p >Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
         </div>
-    
+        <div class="clearfix"></div>
+    </div>
 </section>
 <section id="features">
     <div class="container">
@@ -61,7 +93,7 @@
             <h2 class="mrgbottom35">Features</h2>
         </div>
         <div class="content-section">
-            <div class="features-col-left col-md-2 col-sm-2">
+            <div class="os-animation features-col-left col-md-2 col-sm-2" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
                 <p>Q&A<br/>
                 Agenda<br>
                 Insighs<br>
@@ -70,13 +102,13 @@
                 Signing in
                 </p>
             </div>
-            <div class="features-col-middle col-md-5 col-sm-5">
+            <div class="os-animation features-col-middle col-md-5 col-sm-5" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">
                 <div class="text-content">
                     <p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae </p>
                     <p>faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae duis metus et, vestibulum phasellus velit magnis <a href="">more infomation</a></p>
                 </div>
             </div>
-            <div class="features-col-right col-md-5 col-sm-5">
+            <div class="os-animation features-col-right col-md-5 col-sm-5" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
                 <img class="img-responsive" src="images/desktop.png" alt="img-features">
             </div>
         </div>
@@ -88,10 +120,10 @@
             <h2 class="mrgbottom60">What is nayup help you</h2>
         </div>
         <div class="content-section">
-            <div class="col-md-6 col-sm-6">
+            <div class="os-animation col-md-6 col-sm-6" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
                 <img class="img-responsive" src="images/vote.png" alt="img-vote">
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="os-animation col-md-6 col-sm-6" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">
                 <ul>
                     <li><p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla,.</p></li>
                     <li><p>vestibulum phasellus velit magnis.  </p></li>
@@ -110,8 +142,8 @@
             <h2 class="mrgbottom60">Where to use nayup</h2>
         </div>
         <div class="content-section">
-            <div class="nopadding where-list col-md-8 col-sm-8 col-xs-12">
-                <div class="list-col col-md-6 col-sm-6">
+            <div class="nopadding where-list col-md-8 col-sm-8 col-xs-12" >
+                <div class="os-animation list-col col-md-6 col-sm-6" data-os-animation="fadeInRight" data-os-animation-delay="0.5s">
                     <ul>
                         <li>Public Forums</li>
                         <li>Seminars</li>
@@ -119,7 +151,7 @@
                         <li>Industry Conferences</li>
                     </ul>
                 </div>
-                <div class="list-col col-md-6 col-sm-6">
+                <div class="os-animation list-col col-md-6 col-sm-6" data-os-animation="fadeInRight" data-os-animation-delay="0.8s">
                     <ul>
                         <li>Town Halls</li>
                         <li>Staff Meetings</li>
@@ -128,11 +160,11 @@
                     </ul>
                 </div>  
             </div>
-            <div class="nopadding col-md-4 col-sm-4 col-xs-12">
+            <div class="os-animation nopadding col-md-4 col-sm-4 col-xs-12" data-os-animation="fadeInRight" data-os-animation-delay="1.1s">
                 <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
-                        <source src="video/Pigeon.webm" type="video/webm"/>
-                        <source src="video/Pigeon.ogv" type="video/ogg ogv"; codecs="theora, vorbis"/>
-                        <source src="video/Pigeon.mp4" type="video/mp4"/>
+                    <source src="video/Pigeon.webm" type="video/webm"/>
+                    <source src="video/Pigeon.ogv" type="video/ogg ogv"; codecs="theora, vorbis"/>
+                    <source src="video/Pigeon.mp4" type="video/mp4"/>
                 </video>
             </div>
         </div>
@@ -145,13 +177,13 @@
         </div>
         <div class="content-section">
             <div class="qa-content">
-                <div class="qa-content-left col-md-5"><img class="img-responsive" src="images/QA/man.png" alt="qa-img" /></div>
-                <div class="qa-content-right col-md-7">
-                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa1.jpg" alt="qa-img" /></div>
-                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa2.jpg" alt="qa-img" /></div>
-                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa3.jpg" alt="qa-img" /></div>
-                    <div class="qa-img-item col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="images/QA/qa4.jpg" alt="qa-img" /></div>
-                    <div class="clearfix"></div>
+                <div class="wow fadeInLeft qa-content-left col-md-5" data-wow-duration="2s" data-wow-delay="0.1s"><img class="img-responsive" src="images/QA/man.png" alt="qa-img" /></div>
+                <div class="wow fadeInRight qa-content-right col-md-7" data-wow-duration="3s" data-wow-delay="0.1s">
+                <div class="wow fadeInRight qa-img-item col-md-4 col-sm-4 col-xs-6" data-wow-duration="4s" data-wow-delay="0.1s"><img class="img-responsive" src="images/QA/qa1.jpg" alt="qa-img" /></div>
+                <div class="wow fadeInRight qa-img-item col-md-4 col-sm-4 col-xs-6" data-wow-duration="3s" data-wow-delay="0.1s"><img class="img-responsive" src="images/QA/qa2.jpg" alt="qa-img" /></div>
+                <div class="wow fadeInRight qa-img-item col-md-4 col-sm-4 col-xs-6" data-wow-duration="3s" data-wow-delay="0.1s"><img class="img-responsive" src="images/QA/qa3.jpg" alt="qa-img" /></div>
+                <div class="wow fadeInRight qa-img-item col-md-4 col-sm-4 col-xs-6" data-wow-duration="3s" data-wow-delay="0.1s"><img class="img-responsive" src="images/QA/qa4.jpg" alt="qa-img" /></div>
+                <div class="clearfix"></div>
                 </div>
             </div>
         </div>
@@ -201,6 +233,7 @@
         </div>
    </div> 
 </footer>
+
 </body>
 </html>
 
