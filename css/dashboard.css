@@ -1,0 +1,119 @@
+
+/*---------------------------------------------
+ --------------- CSS FOR DASHBORAD ------------
+ ----------------------------------------------
+ */
+ html{
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+ }
+ body{
+ 	height: 100%;
+ }
+ a{text-decoration: none;}
+ ul{list-style-type: none;}
+ .nopadding{
+	padding: 0;
+ }
+ .main-content{
+ 	min-height: 100%;
+ }
+ .nav-dashboard.navbar-default{
+	border: 0;
+    background-color: #89cb48;
+    height: 50px;
+    border-radius: 0;
+ }
+ .nav-dashboard-container{
+ 	margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+ }
+ .nav-dashboard-container li{
+ 	padding-top: 4px;
+ }
+  .nav-dashboard-container .navbar-brand{
+ 	padding: 7px 5px 0;
+ }
+ .nav-dashboard-container li a{
+ 	color: #fff;
+ }
+ .nav-left{
+ 	width: 50%;
+ }
+ .nav-left a{
+  	margin-left: 10px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 300;
+ }
+ .nav-right ul li{display: inline-block;padding-top:10px;margin-right:15px;}
+ .nav-right img{
+ 	width: 20px;
+ }
+ .dashboard-header button{
+ 	border: 0;
+    background: #faa61f;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    margin: 47px 0;
+ }
+ .dashboard-item{
+ 	border: 1px solid #ddd;
+ 	padding: 15px;
+ }
+ .stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.search-form{
+	width: 50%;
+	float: right;
+}
+.search-form input{
+	border: 1px solid #ddd !important;
+	position: relative;
+	height: 38px;
+    border-radius: 2px;
+}
+.search-form img{width:20px;}
+.search-form button{
+	position: absolute;
+    top: 7px;
+    left: 5px;
+    z-index: 9;
+}
+/* FOOTER */
+footer{
+	height: 50px;
+    background: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer-text{
+	float: right;
+	padding-top: 15px;
+}

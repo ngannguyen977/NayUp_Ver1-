@@ -1,0 +1,92 @@
+/* --------------------------------------------------
+    :: Login 
+	-------------------------------------------------- */
+#form-login{
+    padding-top: 50px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 120px;
+
+}
+#form-login a{
+    text-decoration: underline;
+    color: #63a70a;
+}
+#form-login h2 {
+    font-size: 32px;
+    font-weight: 300;
+
+    text-align: center;
+    padding-bottom: 20px;
+}
+#form-login .checkbox .label, #form-login .form-control, #form-login a{
+    font-size: 16px;
+}
+#form-login .form-group {
+    margin-bottom: 20px;
+}
+#form-login .form-control{
+    height: 42px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+#form-login .form-control:focus{
+    border-color: #63a70a;
+}
+#form-login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.login-title{text-align: center;margin-bottom: 45px;color:#333;}
+#form-login .checkbox.show::before {
+    content: '\e013';
+    color: #63a70a;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#form-login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+#form-login .checkbox .label {
+    color: #6d6d6d;
+    font-weight: normal;
+}
+#form-login .btn.btn-custom {margin-bottom: 20px;}
+#form-login .forget {display: block;}
+.form-control {
+    color: #212121;
+}
+.btn-custom {
+    color: #fff;
+	background-color: #faa61f;
+    border-radius: 2px;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}
+/* --------------------------------------------------
+    :: Sign Up 
+    -------------------------------------------------- */
+.signup-wrapper .text-link,
+.signup-wrapper .text-link a
+{
+    font-size: 14px !important;
+}
+/* --------------------------------------------------
+    :: Forgot
+    -------------------------------------------------- */
+.forgot-wrapper .text-link {text-align: center;}
