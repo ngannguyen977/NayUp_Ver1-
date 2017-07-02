@@ -18,14 +18,18 @@
  }
  body{
  	height: 100%;
+    position:relative;
+    overflow-x: hidden;
  }
- a{text-decoration: none;}
+ a, a:hover{text-decoration: none;}
  ul{list-style-type: none;}
  .nopadding{
 	padding: 0;
  }
+ .margin-bottom50{margin-bottom: 50px;}
  .main-content{
  	min-height: 100%;
+    position:relative;
  }
  .nav-dashboard.navbar-default{
 	border: 0;
@@ -33,47 +37,81 @@
     height: 50px;
     border-radius: 0;
  }
- .nav-dashboard-container{
+ .nav-dashboard-container,.dashboard-container{
  	margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
+    padding: 4px 45px;
  }
  .nav-dashboard-container li{
  	padding-top: 4px;
  }
+ .nav-dashboard-container .dropdown-menu {
+    left: -160px;
+    margin: 16px 0 0;
+    border: 0;
+    padding: 10px;
+    border-radius: 0;
+    width: 180px;
+}
+.nav-dashboard-container .dropdown-menu li{width:100%;}
+.nav-dashboard-container .dropdown-menu li:hover{
+    color:#faa61f;
+}
+.nav-dashboard-container .dropdown-menu>li>a:focus, 
+.nav-dashboard-container .dropdown-menu>li>a:hover{
+    background-color: transparent;
+    color:#faa61f;
+}
+.nav-dashboard-container .dropdown-menu li:not(.dash-nav-item){
+    border-bottom: 1px solid #eee;
+}
   .nav-dashboard-container .navbar-brand{
  	padding: 7px 5px 0;
- }
- .nav-dashboard-container li a{
- 	color: #fff;
  }
  .nav-left{
  	width: 50%;
  }
  .nav-left a{
-  	margin-left: 10px;
     line-height: 40px;
     color: #fff;
     font-size: 19px;
     font-weight: 300;
  }
- .nav-right ul li{display: inline-block;padding-top:10px;margin-right:15px;}
- .nav-right img{
+.nav-right{
+    text-align: right;
+}
+.nav-right ul li a:hover{opacity: 0.5;}
+
+.nav-right>ul>li>a{color:#fff;}
+.nav-right > ul > li{display: inline-block;padding-top:10px;margin-right:15px;}
+.nav-right .dropdown{margin-right: 0;}
+.nav-right img{
  	width: 20px;
+ }
+ .dashboard-header{
+    margin: 10px 15px 50px 15px;
  }
  .dashboard-header button{
  	border: 0;
     background: #faa61f;
     color: #fff;
     font-weight: 600;
-    padding: 15px;
+    padding: 15px 25px;
     font-size: 17px;
     border-radius: 2px;
-    margin: 47px 0;
+    margin: 10px 0;
+    outline: 0;
+ }
+ .dashboard-header button:nth-child(1){
+    margin-right: 10px;
+ }
+  .dashboard-header button:hover{
+    background-color: #eb960c;
  }
  .dashboard-item{
  	border: 1px solid #ddd;
  	padding: 15px;
+    margin-bottom: 15px;
  }
  .stylish-input-group .input-group-addon{
     background: white !important; 
@@ -87,15 +125,20 @@
     border:0;
     background:transparent;
 }
-.search-form{
-	width: 50%;
-	float: right;
+.search-form .input-group{
+    position:relative;
+    display: inline-block !important;
+    float: right;
+    margin-bottom: 20px;
 }
 .search-form input{
 	border: 1px solid #ddd !important;
 	position: relative;
 	height: 38px;
     border-radius: 2px;
+    padding-left: 35px;
+    width: 100%;
+    min-width: 280px;
 }
 .search-form img{width:20px;}
 .search-form button{
@@ -106,7 +149,6 @@
 }
 /* FOOTER */
 footer{
-	height: 50px;
     background: #ddd;
     position: absolute;
     bottom: 0;
@@ -116,4 +158,40 @@ footer{
 .footer-text{
 	float: right;
 	padding-top: 15px;
+    padding-right: 30px;
+}
+.search-form{
+        width:100%;
+}
+@media screen and ( min-width: 768px){
+    .nav-dashboard-container .dropdown-menu {
+        left: -100px;
+    }
+}
+@media screen and ( max-width: 768px){
+    .search-form .input-group {
+        position: relative;
+        display: inline-block !important;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .navbar-header .navbar-brand img, .navbar-header .navbar-toggle{
+        margin-right: 0;
+    }
+}
+@media screen and ( max-width: 480px){
+    .search-form .input-group{
+        width:100%;
+    }
+    .search-form {
+        float: right;
+        width: 100%;
+    }
+    .dashboard-header button{
+        width: 100%;
+    margin: 8px auto;}
+    footer{position:relative;}
+    .nav-dashboard-container, .dashboard-container {
+        padding: 4px 15px;
+    }
 }

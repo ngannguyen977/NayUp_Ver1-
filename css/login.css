@@ -1,11 +1,11 @@
 /* --------------------------------------------------
     :: Login 
 	-------------------------------------------------- */
+    .login-title h2{margin-bottom: 15px;}
 #form-login{
-    padding-top: 50px;
+    padding-top: 90px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 120px;
-
 }
 #form-login a{
     text-decoration: underline;
@@ -14,9 +14,7 @@
 #form-login h2 {
     font-size: 32px;
     font-weight: 300;
-
     text-align: center;
-    padding-bottom: 20px;
 }
 #form-login .checkbox .label, #form-login .form-control, #form-login a{
     font-size: 16px;
@@ -41,6 +39,15 @@
     -o-user-select: none;
     user-select: none;
 }
+.login-wrapper{position:relative;}
+.login-content, .signup-content, .forgot-content{
+    width: 100%;
+    margin: auto;
+    min-width: 200px;
+    max-width: 470px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .login-title{text-align: center;margin-bottom: 45px;color:#333;}
 #form-login .checkbox.show::before {
     content: '\e013';
@@ -64,7 +71,7 @@
     color: #6d6d6d;
     font-weight: normal;
 }
-#form-login .btn.btn-custom {margin-bottom: 20px;}
+#form-login .btn.btn-custom {margin-bottom: 20px;font-size: 16px;}
 #form-login .forget {display: block;}
 .form-control {
     color: #212121;

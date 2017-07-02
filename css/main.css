@@ -30,13 +30,67 @@ ul{list-style-type: none;}
 	text-align: center;
 	font-size: 32px;
 }
+/******* LOADING PAGE *********/
+    
+@-webkit-keyframes loading {
+    from {
+    max-width: 0;
+}
+}@-moz-keyframes loading {
+    from {
+    max-width: 0;
+}
+}@-o-keyframes loading {
+    from {
+    max-width: 0;
+}
+}@keyframes loading {
+    from {
+    max-width: 0;
+}
+}
+
+.page-loading {
+    background: #a9e263;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+}
+.page-loading h1 {
+    font-family: 'Fredoka One', cursive;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -100px;
+    font-size: 40px;
+    text-align: center;
+    color: rgba(77, 146, 3, 0.64);
+}
+
+.page-loading h1:before {
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    color: white;
+    max-width: 100%;
+    -webkit-animation: loading 2s;
+    -moz-animation: loading 2s;
+    -o-animation: loading 2s;
+    -ms-animation: loading 2s;
+    animation: loading 2s;
+}
+
 /*=================HEADER=================*/
 header{
-	padding-bottom: 50px;
+	/*padding-bottom: 50px;*/
 	margin-bottom: 50px;
 }
 .fixtop{
-	padding-top: 20px;
+	padding-top: 25px;
 	padding-bottom: 5px;
 }
 .fixtop.navbar-default{
@@ -59,6 +113,7 @@ header{
 .fixtop .signup-btn{
 	background-color: #faa61f;
 	border-radius: 3px;
+    margin-top: 5px;
 }
 .fixtop .signup-btn a, .fixtop .signup-btn a:hover{
 	color: #fff !important;
@@ -85,12 +140,13 @@ li.signup-btn a:hover{
 .navbar-header .navbar-default .navbar-toggle .icon-bar{
 	background-color: #89cb48;
 }
+.navbar-header .navbar-toggle {margin-right: 0;}
 .header_image { margin-top:-70px; float:left;}
 .nav.navbar-nav.navbar-right span {font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; color:#1b6977;}
 .navbar-right li a {
 	font-size: 16px;
     font-weight: 500;
-    color: #333 !important;
+    color: #333;
 }
 
 /*====================BANNER-MAIN=======================*/
@@ -106,7 +162,7 @@ li.signup-btn a:hover{
 #banner-main{
 	text-align: center;
 	position: relative;
-    margin-bottom: 15%;
+    margin-bottom: 32vh;
 }
 #banner-main video{
 	position: relative;
@@ -451,22 +507,15 @@ button {
     #help ul{margin-top: 0;}
 }
 @media screen and (max-width: 768px){
-	.footer-bottom{
-		padding: 35px 0;	
-	}
-    .footer-content, .nav-container {
-        padding: 0 10px;
-    }
-	.navbar-header .navbar-brand img{
-		margin-left: 10px;
-	}
+	.footer-bottom{padding: 35px 0;	}
+    .nav-container {padding: 0 10px;}
+	.navbar-header .navbar-brand img{margin-left: 10px;}
+    .footer-content{padding:0 30px;}
     .navbar-brand {
         padding-top: 11px;
         padding-left: 0;
     }
-	.navbar-header .navbar-brand img, .navbar-header .navbar-toggle{
-		margin-top: 0;
-	}
+	.navbar-header .navbar-brand img, .navbar-header .navbar-toggle{margin-top: 0;}
     .navbar-header .navbar-brand img, .navbar-header .navbar-toggle:hover,
     .navbar-header .navbar-toggle:focus
     {background-color: transparent;}

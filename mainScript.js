@@ -1,3 +1,16 @@
+$(document).ready(function () {
+        $("body").css("display", "none"); $("body").fadeIn(500);
+        $(".smooth-redirect").click(function (event) {
+            event.preventDefault(); linkLocation = this.href;
+            $("body").fadeOut(300, redirectPage);
+        });
+        function redirectPage() { window.location = linkLocation; }});
+
+        $(window).load(function () {
+            "use strict";
+            $(".page-loading").delay(2000).fadeOut(500);
+});
+
 /* VARIABLES 
 ------------------------------------------------------- */
 
