@@ -2,50 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>NayUp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="font/flaticon.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>NayUp</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
 
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
 
-    <script type="text/javascript">
-        $(function() {
-            function onScrollInit(items, trigger) {
-                items.each(function() {
-                    var osElement = $(this),
-                        osAnimationClass = osElement.attr('data-os-animation'),
-                        osAnimationDelay = osElement.attr('data-os-animation-delay');
-
-                    osElement.css({
-                        '-webkit-animation-delay': osAnimationDelay,
-                        '-moz-animation-delay': osAnimationDelay,
-                        'animation-delay': osAnimationDelay
-                    });
-                    var osTrigger = (trigger) ? trigger : osElement;
-
-                    osTrigger.waypoint(function() {
-                        osElement.addClass('animated').addClass(osAnimationClass);
-                    }, {
-                        triggerOnce: true,
-                        offset: '90%'
-                    });
-                });
-            }
-            onScrollInit($('.os-animation'));
-            onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
-        });
-
-    </script>
 </head>
 
 <body class="staggered-animation-container">
@@ -53,6 +25,7 @@
     <div class="page-loading">
         <h1 id="testid" data-content="Nayup!">Nayup!</h1>
     </div>
+    <!-- HEADER -->
     <header>
         <div class="container">
             <nav class="fixtop navbar navbar-default" role="navigation">
@@ -61,7 +34,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <img class="img-responsive" src="images/icon/menu.svg">
                         </button>
-                        <a class="navbar-brand" href="index.html"><img class="img-responsive" src="images/logo.png">
+                        <a class="navbar-brand" href="index.html">nayup
                         </a>
                     </div>
                     <div class="navbar-fixed collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -72,7 +45,7 @@
                             </li>
                             <li><a href="#">Stories</a>
                             </li>
-                            <li class="signup-btn"><a href="signup.html">Sign Up</a>
+                            <li class="signup-btn"><button>Sign Up</button>
                             </li>
                             <li><a href="login.html">Log In</a>
                             </li>
@@ -85,29 +58,32 @@
             <!-- /nav -->
             <div class="clearfix"></div>
         </div>
-    </header>
+    </header><!-- /.HEADER -->
+    <!-- BANNER MAIN -->
     <section id="banner-main">
         <div class="banner-wrapper">
             <a href="">
                 <span class="video-button">
-                <img src="images/icon/play-arrow.svg" alt="">
-            </span>
+                    <img src="images/icon/play-arrow.svg" alt="">
+                </span>
+                <img class="img-responsive" src="images/video-bg.png" alt="">
+                 <div class="banner-text">
+                    <p>Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum</p>
+                    <p> cu vix accumsan lucilius.</p>
+                </div>
             </a>
-            <div class="banner-text">
-                <p>Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum</p>
-                <p> cu vix accumsan lucilius.</p>
-            </div>
             <div class="clearfix"></div>
         </div>
-    </section>
+    </section><!-- /. BANNER MAIN -->
+    <!-- FEATURES -->
     <section id="features">
         <div class="container">
             <div class="title-section">
                 <h2 class="os-animation mrgbottom35" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">Features</h2>
             </div>
             <div class="content-section">
-                <div class="os-animation features-col-left col-md-2 col-sm-2" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
-                    <p>Q&A
+                <div class="os-animation features-col-left col-md-3 col-sm-3" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
+                    <p class="hidden-xs display-PC">Q&A
                         <br/> Agenda
                         <br> Insighs
                         <br>
@@ -115,31 +91,38 @@
                         <br> Security
                         <br> Signing in
                     </p>
+                    <ul class="hidden-lg hidden-md hidden-sm display-SP">
+                        <li><a href="">Agenda</a></li>
+                        <li><a href="">Insighs</a></li>
+                        <li><a href="">Custom Branding</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Signing in</a></li>
+                    </ul>
                 </div>
-                <div class="os-animation features-col-middle col-md-5 col-sm-5" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">
-                    <div class="text-content">
-                        <p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae </p>
-                        <p>faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae duis metus et, vestibulum phasellus velit magnis <a href="">more infomation</a>
-                        </p>
+
+                <div class="os-animation features-col-right col-md-9 col-sm-9" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
+                    <div class="col-md-6">
+                        <div class="text-content">
+                            <p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae </p>
+                            <p>faucibus elementum feugiat commodo taciti bibendum accumsan, proin laborum risus vitae duis metus et, vestibulum phasellus velit magnis <a href="">more infomation</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="os-animation features-col-right col-md-5 col-sm-5" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
-                    <img class="img-responsive" src="images/desktop.png" alt="img-features">
+                    <div class="col-md-6"><img class="img-responsive" src="images/desktop.png" alt="img-features"></div>
+                    
                 </div>
             </div>
         </div>
-    </section>
+    </section><!-- /. FEATURES -->
+    <!-- HELP -->
     <section id="help" class="mrgbottom35">
         <div class="container">
             <div class="title-section">
                 <h2 class="os-animation mrgbottom60" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">What is nayup help you</h2>
             </div>
             <div class="content-section">
-                <div class="os-animation col-md-6 col-sm-6" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
-                    <img class="img-responsive" src="images/vote.png" alt="img-vote">
-                </div>
-                <div class="os-animation col-md-6 col-sm-6" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">
-                    <ul>
+                <div class="os-animation col-md-6 col-sm-6 col-md-push-6" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">
+                    <ul class="vote-text">
                         <li>
                             <p>Ipsum amet in nam magna, mauris interdum feugiat nunc fringilla,.</p>
                         </li>
@@ -160,16 +143,20 @@
                         </li>
                     </ul>
                 </div>
+                <div class="os-animation col-md-6 col-sm-6 col-md-pull-6" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">
+                    <img class="vote-img img-responsive" src="images/vote.png" alt="img-vote">
+                </div>
             </div>
         </div>
-    </section>
+    </section><!-- /.HELP -->
+    <!-- WHERE -->
     <section id="where" class="mrgbottom100">
         <div class="container">
             <div class="title-section">
                 <h2 class="os-animation mrgbottom60" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">Where to use nayup</h2>
             </div>
             <div class="content-section">
-                <div class="nopadding where-list col-md-8 col-sm-8 col-xs-12">
+                <div class="where-list col-md-8 col-sm-8 col-xs-12">
                     <div class="os-animation list-col col-md-6 col-sm-6" data-os-animation="fadeInRight" data-os-animation-delay="0.5s">
                         <ul>
                             <li>Public Forums</li>
@@ -221,7 +208,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> <!-- /. WHERE -->
+    <!-- QA -->
     <section id="qa" class="mrgbottom100">
         <div class="container">
             <div class="title-section">
@@ -229,7 +217,7 @@
             </div>
             <div class="content-section">
                 <div class="qa-content">
-                    <div class="os-animation qa-content-left col-md-5" data-os-animation="fadeInRight" data-os-animation-delay="0.3s"><img class="img-responsive" src="images/QA/man.png" alt="qa-img" />
+                    <div class="hidden-xs hidden-sm os-animation qa-content-left col-md-5" data-os-animation="fadeInRight" data-os-animation-delay="0.3s"><img class="img-responsive" src="images/QA/man.png" alt="qa-img" />
                     </div>
                     <div class="os-animation qa-content-right col-md-7" data-os-animation="fadeInRight" data-os-animation-delay="0.6s">
                         <div class="os-animation qa-img-item col-md-4 col-sm-4 col-xs-6" data-wow-duration="4s" data-wow-delay="0.9s"><img class="img-responsive" src="images/QA/qa1.jpg" alt="qa-img" />
@@ -243,16 +231,18 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                <p class="hidden-lg hidden-md hidden-sm center">Free for Event that under 50 participants, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan.</p>
             </div>
         </div>
-    </section>
+    </section><!-- /. QA -->
+    <!-- SIGNUP -->
     <section id="signup">
         <div class="container">
             <h2 class="os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.5s">Your event will be great with nayup</h2>
             <p class="os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.8s">Free for Event that under 50 participants, quam porttitor magnis, vel orci. Est velit semper et accumsan ut lorem, faucibus elementum feugiat commodo taciti bibendum accumsan.</p>
             <button class="os-animation" data-os-animation="fadeInUp" data-os-animation-delay="1.1s" type="submit">SIGN UP NOW</button>
         </div>
-    </section>
+    </section><!-- /. SIGNUP -->
     <footer>
         <div class="footer-content">
             <div class="footer-top">
@@ -296,15 +286,13 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
+            <hr>
             <div class="col-md-12 footer-bottom">
-                <p>© 2017 Copyright HR Academy - Privacy Policy</p>
+                <p class="text-thin">© 2017 Copyright HR Academy - Privacy Policy</p>
                 <p>PRIVACY POLICY</p>
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-    
-    </script>
-    <script src="mainScript.js"></script>
+    <script src="js/mainScript.js"></script>
 </body>
 </html>

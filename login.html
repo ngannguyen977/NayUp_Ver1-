@@ -3,50 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NayUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>NayUp</title>
+    
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 
-    <link rel="stylesheet" href="font/flaticon.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
 
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
-
-    <script type="text/javascript">
-        $(function() {
-            function onScrollInit(items, trigger) {
-                items.each(function() {
-                    var osElement = $(this),
-                        osAnimationClass = osElement.attr('data-os-animation'),
-                        osAnimationDelay = osElement.attr('data-os-animation-delay');
-
-                    osElement.css({
-                        '-webkit-animation-delay': osAnimationDelay,
-                        '-moz-animation-delay': osAnimationDelay,
-                        'animation-delay': osAnimationDelay
-                    });
-                    var osTrigger = (trigger) ? trigger : osElement;
-
-                    osTrigger.waypoint(function() {
-                        osElement.addClass('animated').addClass(osAnimationClass);
-                    }, {
-                        triggerOnce: true,
-                        offset: '90%'
-                    });
-                });
-            }
-            onScrollInit($('.os-animation'));
-            onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
-        });
-    </script>
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
-<body class="staggered-animation-container">
+<body>
+    <header>
         <div class="container">
             <nav class="fixtop navbar navbar-default" role="navigation">
                 <div class="nav-container">
@@ -65,7 +37,7 @@
                             </li>
                             <li><a href="#">Stories</a>
                             </li>
-                            <li class="signup-btn"><a href="signup.html">Sign Up</a>
+                            <li class="signup-btn"><button>Sign Up</button>
                             </li>
                             <li><a href="login.html">Log In</a>
                             </li>
@@ -77,39 +49,39 @@
         </div>
     </header>
     <!-- Login Form -->
-        <section id="form-login">
-            <div class="login-wrapper container">
-                <div class="row">
-                    <div class="login-content">
-                        <div class="login-title">
-                            <h2>Go to nayup Dashboard</h2>
-                            <p>or &nbsp;<a href="">create an account</a></p>
-                        </div>           
-                        <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
+    <section id="form-login">
+        <div class="login-wrapper container">
+            <div class="row">
+                <div class="login-content">
+                    <div class="login-title">
+                        <h2>Go to nayup Dashboard</h2>
+                        <p>or &nbsp;<a href="">create an account</a></p>
+                    </div>           
+                    <form role="form" method="post" id="login-form">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Password</label>
+                            <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                        </div>
+                        <div>
+                            <div class="nopadding col-md-5 col-sm-5 checkbox">
+                                <span class="character-checkbox" onclick="showPassword()"></span>
+                                <span class="label">Remember me</span>
                             </div>
-                            <div class="form-group">
-                                <label for="key" class="sr-only">Password</label>
-                                <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                            <div class="nopadding col-md-7 col-sm-7 col-xs-12">
+                                <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in to dashboard">
                             </div>
-                            <div>
-                                <div class="nopadding col-md-5 col-sm-5 checkbox">
-                                    <span class="character-checkbox" onclick="showPassword()"></span>
-                                    <span class="label">Remember me</span>
-                                </div>
-                                <div class="nopadding col-md-7 col-sm-7 col-xs-12">
-                                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in to dashboard">
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </form>
-                        <p><a href="forgot.html">Forgot your password?</a></p>  
-                    </div> <!-- /.login content   --> 
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
-        </section>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                    <p><a href="forgot.html">Forgot your password?</a></p>  
+                </div> <!-- /.login content   --> 
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section>
     <!-- / Login Form -->
     <footer>
         <div class="footer-content">

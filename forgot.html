@@ -3,50 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NayUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>NayUp</title>
+    
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 
-    <link rel="stylesheet" href="font/flaticon.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
 
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
-
-    <script type="text/javascript">
-        $(function() {
-            function onScrollInit(items, trigger) {
-                items.each(function() {
-                    var osElement = $(this),
-                        osAnimationClass = osElement.attr('data-os-animation'),
-                        osAnimationDelay = osElement.attr('data-os-animation-delay');
-
-                    osElement.css({
-                        '-webkit-animation-delay': osAnimationDelay,
-                        '-moz-animation-delay': osAnimationDelay,
-                        'animation-delay': osAnimationDelay
-                    });
-                    var osTrigger = (trigger) ? trigger : osElement;
-
-                    osTrigger.waypoint(function() {
-                        osElement.addClass('animated').addClass(osAnimationClass);
-                    }, {
-                        triggerOnce: true,
-                        offset: '90%'
-                    });
-                });
-            }
-            onScrollInit($('.os-animation'));
-            onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
-        });
-    </script>
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
-<body class="staggered-animation-container">
+<body>
     <header>
         <div class="container">
             <nav class="fixtop navbar navbar-default" role="navigation">
@@ -66,7 +37,7 @@
                             </li>
                             <li><a href="#">Stories</a>
                             </li>
-                            <li class="signup-btn"><a href="singup.html">Sign Up</a>
+                            <li class="signup-btn"><button>Sign Up</button>
                             </li>
                             <li><a href="login.html">Log In</a>
                             </li>
@@ -79,29 +50,29 @@
     </header>
     <!-- Login Form -->
     <section id="form-login">
-            <div class="forgot-wrapper container">
-                <div class="row">
-                    <div class="forgot-content">
-                        <div class="login-title">
-                            <h2>Forgot your password</h2>
-                            <p>Enter the email address you use to log into your Dashboard.<br>
-                            You'll receive instructions to reset your password via email.</p>
-                        </div>           
-                        <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
-                            </div>
-                            <div class="nopadding">
-                                <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Reset Password">
-                            </div>
-                            <div class="text-link"><a href="">Return Login page</a></div>
-                            <div class="clearfix"></div>
-                        </form> 
-                    </div>            
-                </div>
+        <div class="forgot-wrapper container">
+            <div class="row">
+                <div class="forgot-content">
+                    <div class="login-title">
+                        <h2>Forgot your password</h2>
+                        <p>Enter the email address you use to log into your Dashboard.<br>
+                        You'll receive instructions to reset your password via email.</p>
+                    </div>           
+                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <div class="nopadding">
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Reset Password">
+                        </div>
+                        <div class="text-link"><a href="">Return Login page</a></div>
+                        <div class="clearfix"></div>
+                    </form> 
+                </div>            
             </div>
-        </section>
+        </div>
+    </section>
     <!-- / Login Form -->
     <footer>
         <div class="footer-content">
