@@ -32,26 +32,41 @@
  	min-height: 100%;
     position:relative;
  }
-#dashboard {padding-bottom: 50px;}
+#dashboard, #projector{padding-bottom: 50px;}
 #dashboard h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 300;
+    color: #89cb48;
 }
- .nav-dashboard.navbar-default{
+.nav-admin .navbar-brand{
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    color:  #fff;
+}
+.nav-admin .text-header{font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 35px;
+}
+.nav-admin .navbar-brand:hover, 
+.nav-admin .navbar-brand:focus{
+    color: #fff;
+}
+ .nav-admin.navbar-default{
 	border: 0;
     background-color: #89cb48;
     height: 50px;
     border-radius: 0;
  }
- .nav-dashboard-container,.dashboard-container{
+ .nav-admin-container,.dashboard-container, .projector-container{
  	margin-left: auto;
     margin-right: auto;
     padding: 4px 55px;
  }
- .nav-dashboard-container li{
+ .nav-admin-container li{
  	padding-top: 4px;
  }
- .nav-dashboard-container .dropdown-menu {
+ .nav-admin-container .dropdown-menu {
     left: -160px;
     margin: 16px 0 0;
     border: 0;
@@ -59,28 +74,28 @@
     border-radius: 0;
     width: 180px;
 }
-.nav-dashboard-container .dropdown-menu li{width:100%;}
-.nav-dashboard-container .dropdown-menu li:hover{
+.nav-admin-container .dropdown-menu li{width:100%;}
+.nav-admin-container .dropdown-menu li:hover{
     color:#faa61f;
 }
-.nav-dashboard-container .dropdown-menu>li>a:focus, 
-.nav-dashboard-container .dropdown-menu>li>a:hover{
+.nav-admin-container .dropdown-menu>li>a:focus, 
+.nav-admin-container .dropdown-menu>li>a:hover{
     background-color: transparent;
     color:#faa61f;
 }
-.nav-dashboard-container .dropdown-menu li:not(.dash-nav-item){
+.nav-admin-container .dropdown-menu li:not(.dash-nav-item){
     border-bottom: 1px solid #eee;
 }
-  .nav-dashboard-container .navbar-brand{
- 	padding: 7px 5px 0;
+  .nav-admin-container .navbar-brand{
+ 	padding: 0 25px 0 0;
  }
  .nav-left{
  	width: 50%;
  }
- .nav-left a{
-    line-height: 40px;
+ .nav-left a, .top-left a{
+    line-height: 35px;
     color: #fff;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 300;
  }
 .nav-right{
@@ -98,12 +113,15 @@
     margin: 10px 15px 50px 15px;
  }
  .dashboard-header button{
+    font-family: Franklin Gothic Heavy;
+    text-transform: uppercase;
  	border: 0;
     background: #faa61f;
     color: #fff;
     font-weight: 600;
-    padding: 15px 25px;
-    font-size: 17px;
+    padding: 0 25px;
+    height: 45px;
+    font-size: 18px;
     border-radius: 2px;
     margin: 10px 0;
     outline: 0;
@@ -118,14 +136,28 @@
  	border: 1px solid #ddd;
  	padding: 15px;
     margin-bottom: 15px;
+    min-height: 180px;
+    position: relative;
  }
+ .dashboard-item  p{
+    font-weight: 300;
+    font-size: 14px;
+ }
+ .dashboard-item .company-name{
+    font-size: 20px;
+    font-weight: 400;
+    color: #303030;
+ }
+  .dashboard-item .level{font-weight: 400;}
  .stylish-input-group .input-group-addon{
     background: white !important; 
 }
 .stylish-input-group .form-control{
 	border-right:0; 
 	box-shadow:0 0 0; 
-	border-color:#ccc;
+	border-color:#dbdbdb;
+    font-weight: 300;
+    color: #ddd;
 }
 .stylish-input-group button{
     border:0;
@@ -136,6 +168,7 @@
     display: inline-block !important;
     float: right;
     margin-bottom: 20px;
+        width: 400px;
 }
 .search-form input{
 	border: 1px solid #ddd !important;
@@ -164,14 +197,18 @@ footer{
 .footer-text{
 	float: right;
     height: 54px;
-    line-height: 60px;
+    line-height: 65px;
     padding-right: 55px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #303030;
+    text-transform: lowercase;
 }
 .search-form{
         width:100%;
 }
 @media screen and ( min-width: 768px){
-    .nav-dashboard-container .dropdown-menu {
+    .nav-admin-container .dropdown-menu {
         left: -100px;
     }
     
@@ -183,17 +220,18 @@ footer{
         margin-bottom: 20px;
         width: 100%;
     }
-    .navbar-header .navbar-brand img, .navbar-header .navbar-toggle{
-        margin-right: 0;
-    }
+    .navbar-header .navbar-brand img, .navbar-header .navbar-toggle{margin-right: 0;}
     .footer-text{
         height: 100%;
         line-height: 25px;
         margin-top: 13px;
         margin-left: 15px;
-        font-size: 16px;
+        font-size: 14px;
     }
     
+}
+@media screen and ( max-width: 550px){
+    .dashboard-header button{padding:0 2vw;}
 }
 @media screen and ( max-width: 480px){
     .search-form .input-group{
@@ -205,12 +243,33 @@ footer{
     }
     .dashboard-header button{
         width: 100%;
-    margin: 8px auto;}
-    .nav-dashboard-container, .dashboard-container {
+        margin: 8px auto;
+    }
+    .nav-admin-container, .dashboard-container, .projector-container{
         padding: 4px 15px;
     }
+    .col100{width:100%;}
+    
 }
 /* PROJECTOR */
+
+#projector{margin-top: 50px;}
 .projector-item img{
     width: 24px;
+    padding-bottom: 10px;
 }
+.projector-item .box-bottom{
+    bottom: 0;
+    position: absolute;
+    right: 0px;
+    left: 0;
+    padding: 0 20px;
+    color: #303030;
+    font-weight: 300;
+}
+.projector-body{clear: both;}
+.nav-admin .nav-right li a{
+    font-weight: 300;
+    font-size: 16px;
+}
+.nav-admin .nav-right .arrow img{width:15px;}
