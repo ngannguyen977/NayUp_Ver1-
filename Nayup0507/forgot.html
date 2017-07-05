@@ -37,7 +37,7 @@
                             </li>
                             <li><a href="#">Stories</a>
                             </li>
-                            <li class="signup-btn"><button>Sign up</button>
+                            <li class="signup-btn"><button>Sign Up</button>
                             </li>
                             <li><a href="login.html">Log In</a>
                             </li>
@@ -50,37 +50,28 @@
     </header>
     <!-- Login Form -->
     <section id="form-login">
-        <div class="login-wrapper container">
+        <div class="forgot-wrapper container">
             <div class="row">
-                <div class="login-content">
+                <div class="forgot-content">
                     <div class="login-title">
-                        <h2>Go to nayup Dashboard</h2>
-                        <p>or &nbsp;<a href="">create an account</a></p>
+                        <h2>Forgot your password</h2>
+                        <p>Enter the email address you use to log into your Dashboard.<br>
+                        You'll receive instructions to reset your password via email.</p>
                     </div>           
-                    <form role="form" method="post" id="login-form">
+                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
                         </div>
-                        <div class="form-group">
-                            <label for="key" class="sr-only">Password</label>
-                            <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                        <div class="nopadding">
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Reset Password">
                         </div>
-                        <div>
-                            <div class="nopadding col-md-5 col-sm-5 checkbox">
-                                <span class="character-checkbox" onclick="showPassword()"></span>
-                                <span class="label">Remember me</span>
-                            </div>
-                            <div class="nopadding col-md-7 col-sm-7 col-xs-12">
-                                <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in to dashboard">
-                            </div>
-                        </div>
+                        <div class="text-link"><a href="">Return Login page</a></div>
                         <div class="clearfix"></div>
-                    </form>
-                    <p><a href="forgot.html">Forgot your password?</a></p>  
-                </div> <!-- /.login content   --> 
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
+                    </form> 
+                </div>            
+            </div>
+        </div>
     </section>
     <!-- / Login Form -->
     <footer>
@@ -133,6 +124,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/mainScript.js"></script>
+    <script src="mainScript.js"></script>
 </body>
 </html>

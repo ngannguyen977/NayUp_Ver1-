@@ -21,13 +21,9 @@
     position:relative;
     overflow-x: hidden;
     font-family: 'roboto', sans-serif; font-size: 18px;
-    font-size: 15px;
-    font-weight: 300;
-    color: #303030;
  }
  a, a:hover{text-decoration: none;}
  ul{list-style-type: none;}
-
  .nopadding{
 	padding: 0;
  }
@@ -36,7 +32,7 @@
  	min-height: 100%;
     position:relative;
  }
-#dashboard, #projector, #user{padding-bottom: 100px;}
+#dashboard, #projector{padding-bottom: 50px;}
 #dashboard h2 {
     font-size: 24px;
     font-weight: 300;
@@ -50,7 +46,7 @@
 .nav-admin .text-header{font-size: 24px;
     color: #fff;
     font-weight: 300;
-    line-height: 37px;
+    line-height: 35px;
 }
 .nav-admin .navbar-brand:hover, 
 .nav-admin .navbar-brand:focus{
@@ -62,8 +58,7 @@
     height: 50px;
     border-radius: 0;
  }
- .nav-admin-container, .dashboard-container, 
- .projector-container, .admin-container{
+ .nav-admin-container,.dashboard-container, .projector-container{
  	margin-left: auto;
     margin-right: auto;
     padding: 4px 55px;
@@ -153,8 +148,8 @@
     font-weight: 400;
     color: #303030;
  }
-.dashboard-item .level{font-weight: 400;}
-.stylish-input-group .input-group-addon{
+  .dashboard-item .level{font-weight: 400;}
+ .stylish-input-group .input-group-addon{
     background: white !important; 
 }
 .stylish-input-group .form-control{
@@ -212,109 +207,11 @@ footer{
 .search-form{
         width:100%;
 }
-
-/* PROJECTOR */
-
-#projector{margin-top: 50px;}
-.projector-item img{
-    width: 24px;
-    padding-bottom: 10px;
-}
-.projector-item span{font-weight: 500;font-size: 18px;}
-.projector-item .box-bottom{
-    bottom: 0;
-    position: absolute;
-    right: 0px;
-    left: 0;
-    padding: 0 20px;
-    color: #303030;
-    font-weight: 300;
-}
-.projector-body{clear: both;}
-.nav-admin .nav-right li a{
-    font-weight: 300;
-    font-size: 16px;
-}
-.nav-admin .nav-right .arrow img{width:15px;}
-
-/* ================= USER =====================*/
-#user .top-content-container, #user .body-content{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px 15% 30px 15%;
-}
-
-.user-content .top-content textarea{resize: none;border:0;margin-top: 25px;}
-.user-content .top-content button{
-    height: 38px; 
-    border: 0;
-    font-family:Franklin Gothic Heavy;
-    font-size: 18px;
-    background-color: #faa61f;
-    color: #fff;
-    padding:  0 3em;
-    margin-top: 15px;
-    border-radius: 3px;
-}
-.btn-ask{text-align: right;}
-.user-content .top-content{position: relative;background: #89cb48;margin-top: -19px;}
-.user-content .top-content span{
-    position: absolute;
-    bottom: 42%;
-    right: 16%;
-    font-size: 14px;
-    font-weight: 300;
-    color: #999;
-}
-.user-content .top-content::after{
-    content: '';
-    background-color: #ddd;
-    height: 200px;
-}
-.user-content  .body-content{margin-top: 30px;}
-.user-content  .body-content .user-item{
-    border-bottom: 1px solid #dbdbdb;
-    padding: 15px 0 5px 0;
-    position: relative;
-}
-#user .user-item .item-icon img{
-    width: 28px;
-    margin-bottom: 15px;
-}
-.user-item  .item-text img{width:28px;}
-.user-item  .item-icon {text-align: center;}
-.user-item  .item-icon p{font-size: 16px;}
-.user-item  .item-icon strong{font-size: 25px;}
-.user-item  .item-text span{color:#808080;}
-.user-item  .item-text .comment{margin-top: 35px;}
-.user-item  .item-text .comment span{margin-right: 15px;}
-
-/* =============ADMIN ================*/
-
-.nav-admin-container .box-admin{
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 0 10px;
-}
-.text-box{
-    font-weight: 300;
-    background: #ddd;
-    padding: 20px;
-    border-radius: 3px;
-}
-#admin .table-bordered>tbody>tr>td{
-    border:0;
-    border-top: 1px solid #ddd;
-}
-
-/* ==============RESPONSIVE============ */
 @media screen and ( min-width: 768px){
     .nav-admin-container .dropdown-menu {
         left: -100px;
     }
-    .user-item .item-icon {
-        width: 12%;
-    }
+    
 }
 @media screen and ( max-width: 767px){
     .search-form .input-group {
@@ -352,13 +249,27 @@ footer{
         padding: 4px 15px;
     }
     .col100{width:100%;}
-    .user-item  .item-text .comment{margin-top:0;}
     
 }
-@media screen and (max-width:768px){
-    #user .top-content-container, #user .body-content {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 5px 5% 30px 5%;
-    }
+/* PROJECTOR */
+
+#projector{margin-top: 50px;}
+.projector-item img{
+    width: 24px;
+    padding-bottom: 10px;
 }
+.projector-item .box-bottom{
+    bottom: 0;
+    position: absolute;
+    right: 0px;
+    left: 0;
+    padding: 0 20px;
+    color: #303030;
+    font-weight: 300;
+}
+.projector-body{clear: both;}
+.nav-admin .nav-right li a{
+    font-weight: 300;
+    font-size: 16px;
+}
+.nav-admin .nav-right .arrow img{width:15px;}
