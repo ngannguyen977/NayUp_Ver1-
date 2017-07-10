@@ -73,7 +73,7 @@
 
 /* select option */
 
-.accordion-heading select{
+.panel-heading select{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -191,14 +191,6 @@
     min-height: 180px;
     position: relative;
  }
- .dashboard-item, .projector-item i::before{
-    color: #bebebe;
-    font-size: 24px;
- }
- .dashboard-item, .projector-item i:hover::before,
-  .dashboard-item, .projector-item i:focus::before{
-    color: #faa61f;
-  }
  .dashboard-item  p{
     font-weight: 300;
     font-size: 14px;
@@ -332,29 +324,15 @@ footer{
     padding: 15px 0 5px 0;
     position: relative;
 }
-#user .user-item i::before{
-    font-size:28px;
+#user .user-item .item-icon img{
+    width: 28px;
     margin-bottom: 15px;
-    color: #bebebe;
-}
-#user .user-item i:hover::before, 
-#user .user-item  i:focus::before, 
-#user .user-item span:hover, #user .user-item span:focus{
-    color: #faa61f;
-}
-#user .user-item .comment i{
-    position: absolute;
-    top: -7px;
 }
 .user-item  .item-text img{width:28px;}
 .user-item  .item-icon {text-align: center;}
 .user-item  .item-icon p{font-size: 16px;}
 .user-item  .item-text span{color:#808080;}
-.user-item  .item-text .comment{
-    margin-top: 24px;
-    position: relative;
-    display: inline-block;
-}
+.user-item  .item-text .comment{margin-top: 35px;}
 .user-item  .item-text .comment span{margin-right: 15px;}
 
 /* =============ADMIN ================*/
@@ -365,7 +343,11 @@ footer{
     padding: 0 10px;
 }
 .text-box{
-    
+    font-weight: 300;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 20px 0;
 }
 #admin .table-bordered>tbody>tr>td{
     border:0;
@@ -375,7 +357,15 @@ footer{
 }
 #admin .table-bordered .count-vote, .text-vote{text-align: center;}
 #admin .table-bordered .text-vote{font-size: 16px;}
-#admin .panel-heading{border:1px solid #dbdbdb;margin-bottom: -1px;}x;}
+#admin .panel-heading{border:1px solid #dbdbdb;margin-bottom: -1px;}
+#admin .panel-heading .filter-form{width:340px;}
+#admin .panel-heading .filter-form .form-control{
+        border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #777;
+    height: 40px;
+    padding-left: 10px;
+}
 #admin .panel-heading h3{
     line-height: 40px;
     color: #faa61f;
@@ -384,89 +374,16 @@ footer{
 }
 #admin .name-box{margin-right: 20px;}
 #admin .info-top{margin-bottom: 20px;color:#999;}
-.accordion-inner ul{
-    padding:0;
-}
-#admin  .accordion-inner ul li{
-    display: inline-block;
-    margin: 0 15px;
-    text-align: center;
-   
-}
-#admin  .accordion-inner ul li a{ color: #bebebe;font-size: 13px;text-decoration: none;}
-#admin .accordion-inner .list-icon{width:22%;}
-#admin .accordion-heading span{
-    font-size: 24px;
-    color: #303030;
-}
-.accordion-top{
-    font-weight: 300;
-    background: #ddd;
-    padding: 20px;
-    border-radius: 3px;
-    margin: 20px 0;
-}
-.accordion-top a{
-    width: 100%;
-    display: inline-block;
-}
-.accordion-inner{
-    padding: 2%;
-}
-.search-time{
-    position: absolute;
-    right: 20px;
-    width: 35%;
-    top: -47px;
-    border-radius: 2px;
-    box-shadow: none;
-    border: 1px solid #777;
-    height: 40px;
-    padding-left: 10px;
-}
-.btn-approve{
-    height: 38px;
-    border: 0;
-    font-family: Franklin Gothic Heavy;
-    font-size: 18px;
-    background-color: #faa61f;
-    color: #fff;
-    padding: 0 2em;
-    margin-top: 15px;
-    border-radius: 3px
-}
-.filter-form .form-control {
-    border-radius: 2px;
-    box-shadow: none;
-    border: 1px solid #777;
-    height: 40px;
-    padding-left: 10px;
-    }
 /* ==============RESPONSIVE============ */
-@media screen and ( max-width: 1355px){
-    #admin .accordion-inner .list-icon{
-        width: 35%;
-        text-align: center;
-    }
-}
-@media screen and ( max-width: 892px){
-    #admin .accordion-inner .list-icon{
-        width: 25%;
-    }
-}
 @media screen and ( min-width: 769px){
     .nav-admin-container .dropdown-menu {
         left: -100px;
     }
-    .user-item.collapse.item-icon .filter-form{
+    .user-item .item-icon {
         width: 12%;
     }
-    
 }
 @media screen and ( max-width: 768px){
-    #admin .accordion-inner .list-icon{
-        width: 20%;
-    }
     .search-form .input-group {
         position: relative;
         display: inline-block !important;
@@ -481,7 +398,7 @@ footer{
         margin-left: 15px;
         font-size: 14px;
     }
-    #admin .filter-form{width:100%;}
+    #admin .panel-heading .filter-form{width:100%;}
     .panel-heading select {
         background: transparent url(../images/icon/arrow-down.svg) no-repeat 97% center;
         background-size: 14px;

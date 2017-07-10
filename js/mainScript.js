@@ -121,3 +121,12 @@ var viewportHeight = $(window).height();
             
         $('#banner-main').css('margin-bottom', '220px')
     }
+
+// Accordin group
+$(document).on('click', function (e) {
+    
+    if($('accordion-toggle').setAttribute('aria-expanded', 'false')){
+    	$('.filter-form').hide();
+    }
+
+});

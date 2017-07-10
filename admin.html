@@ -35,62 +35,119 @@
         </div>
     </header>
     <section id="admin">
+        <!-- ADMIN CONTAINER -->
         <div class="admin-container">
             <div class="admin-content">
-                <div class="row">
-                    <div class="admin-body">
-                        <h3 class="text-box"> Awaiting Approval (0)</h3>
-                        <div>
-                            <div>Allow(3)</div>
-                            <div class="pull-right">
-                                <div class="form-group">
-                                    <select class="form-control nav">
-                                        <option value="" selected disabled>seleziona una serie</option>
-                                        <option value="serie-0">Vivaro - T180</option>
-                                        <option value="serie-1">San Vito al Tgl. - TM10</option>
-                                    </select>
-                                </div>
+                <div class="admin-body">
+                    <!-- accordin group -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading accordion-top">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#awaiting">
+                                <span class="text-box"> Awaiting Approval (0)</span>
+                            </a>
+                        </div>
+                        <div id="awaiting" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
+                                <button class="btn-approve" type="submit">Approve</button>
                             </div>
                         </div>
-                        <table class="table table-bordered">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <p>2</p>
-                                    <p>votes</p>
-                                </td>
-                                <td>
-                                    <div><span>chau</span><span>2 day ago</span></div>
-                                    <p>Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <p>2</p>
-                                    <p>votes</p>
-                                </td>
-                                <td>
-                                    <div><span>chau</span><span>2 day ago</span></div>
-                                    <p>te mel omnes vivendum indoctum, cu vix accumsan lucilius. Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <p>2</p>
-                                    <p>votes</p>
-                                </td>
-                                <td>
-                                    <div><span>chau</span><span>2 day ago</span></div>
-                                    <p>te mel omnes vivendum indoctum, cu vix accumsan lucilius. Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <h3 class="text-box">Blocked (0)</h3>
-                    </div>
+                    </div><!-- accordin group -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            
+                            <a class="accordion-toggle allowed" data-toggle="collapse" data-parent="#leftMenu" href="#allowed">
+                                <div class="panel-heading">
+                                    <div class="nopadding col col-md-4 col-sm-4 col-xs-12">
+                                        <span class="panel-title">Allowed (3)</span>
+                                    </div>
+                                      <div class="clearfix"></div>
+                                </div>
+                            </a>
+                            <div class="nopadding col col-md-8 col-sm-8 col-xs-12 filter-form text-right">
+                                <select class="form-control search-time">
+                                    <option value="" selected disabled>Sort by time posted</option>
+                                    <option value="serie-0">1:00</option>
+                                    <option value="serie-1">2:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="allowed" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                            <p class="count-vote text-strong"><strong>2</strong></p>
+                                            <p class="text-vote">votes</p>
+                                        </td>
+                                        <td>
+                                            <div class="info-top"><span class="name-box">chau</span><span class="date-box">2 day ago</span></div>
+                                            <p>Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
+                                        </td>
+                                        <td class="list-icon">
+                                            <ul>
+                                                <li><a href=""><img src="images/icon/active.png"/><br>Active</a></li>
+                                                <li><a href=""><img src="images/icon/answer.png"/><br>Answered</a></li>
+                                                <li><a href=""><img src="images/icon/hide.png"/><br>Hide</a></li>
+                                            </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                            <p class="count-vote text-strong"><strong>2</strong></p>
+                                            <p class="text-vote">votes</p>
+                                        </td>
+                                        <td>
+                                            <div class="info-top"><span class="name-box">chau</span><span class="date-box">2 day ago</span></div>
+                                            <p>te mel omnes vivendum indoctum, cu vix accumsan lucilius. Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
+                                        </td>
+                                        <td class="list-icon">
+                                            <ul>
+                                                <li><a href=""><img src="images/icon/active.png"/><br>Active</a></li>
+                                                <li><a href=""><img src="images/icon/answer.png"/><br>Answered</a></li>
+                                                <li><a href=""><img src="images/icon/hide.png"/><br>Hide</a></li>
+                                            </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                            <p class="count-vote text-strong"><strong>2</strong></p>
+                                            <p class="text-vote">votes</p>
+                                        </td>
+                                        <td>
+                                            <div class="info-top"><span class="name-box">chau</span><span class="date-box">2 day ago</span></div>
+                                            <p>te mel omnes vivendum indoctum, cu vix accumsan lucilius. Lorem ipsum dolor sit amet, te mel omnes vivendum indoctum, cu vix accumsan lucilius.</p>
+                                        </td>
+                                        <td class="list-icon">
+                                            <ul>
+                                                <li><a href=""><img src="images/icon/active.png"/><br>Active</a></li>
+                                                <li><a href=""><img src="images/icon/answer.png"/><br>Answered</a></li>
+                                                <li><a href=""><img src="images/icon/hide.png"/><br>Hide</a></li>
+                                            </ul>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!-- accordin group -->
+                    <!-- accordin group -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading accordion-top">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#blocked">
+                                <span class="text-box"> Blocked (0)</span>
+                            </a>
+                        </div>
+                        <div id="blocked" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p> when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
+                            </div>
+                        </div>
+                    </div><!-- accordin group -->
                 </div>
             </div>
-        </div>
+        </div><!-- / ADMIN CONTAINER -->
     </section>
     <footer>
         <div class="footer-content">
