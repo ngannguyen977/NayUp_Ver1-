@@ -123,10 +123,19 @@ var viewportHeight = $(window).height();
     }
 
 // Accordin group
-$(document).on('click', function (e) {
-    
-    if($('accordion-toggle').setAttribute('aria-expanded', 'false')){
-    	$('.filter-form').hide();
-    }
 
+$(".accordion-group .accordion").hide();
+
+$(".accordion-allowed").show();
+// $(".accordion-group .accordion-title-allowed").css('color', '#faa61f');
+$(".accordion-group h3").click(function(){
+
+  $accordion = $(this).next();
+  if ($accordion.is(':hidden') === true) {
+
+    $(".accordion-group .accordion").slideUp();
+    $accordion.slideDown();
+  } else {
+    $accordion.slideUp();
+  }
 });

@@ -285,6 +285,7 @@ footer{
     color: #303030;
     font-weight: 300;
 }
+.projector-item .box-bottom i{margin-left: 10px;}
 .projector-body{clear: both;}
 .nav-admin .nav-right li a{
     font-weight: 300;
@@ -384,22 +385,22 @@ footer{
 }
 #admin .name-box{margin-right: 20px;}
 #admin .info-top{margin-bottom: 20px;color:#999;}
-.accordion-inner ul{
+#admin table ul{
     padding:0;
 }
-#admin  .accordion-inner ul li{
+#admin  table .list-icon li{
     display: inline-block;
     margin: 0 15px;
     text-align: center;
    
 }
-#admin  .accordion-inner ul li a{ color: #bebebe;font-size: 13px;text-decoration: none;}
-#admin .accordion-inner .list-icon{width:22%;}
-#admin .accordion-heading span{
-    font-size: 24px;
+#admin  table .list-icon li a{ color: #bebebe;font-size: 13px;text-decoration: none;}
+#admin table .list-icon{width:22%;}
+#admin table .info-top span{
+    font-size: 15px;
     color: #303030;
 }
-.accordion-top{
+.text-box{
     font-weight: 300;
     background: #ddd;
     padding: 20px;
@@ -417,13 +418,14 @@ footer{
     position: absolute;
     right: 20px;
     width: 35%;
-    top: -47px;
+    top: -68px;
     border-radius: 2px;
     box-shadow: none;
     border: 1px solid #777;
     height: 40px;
     padding-left: 10px;
 }
+.accordion-title-allowed{color:;}
 .btn-approve{
     height: 38px;
     border: 0;
@@ -435,6 +437,12 @@ footer{
     margin-top: 15px;
     border-radius: 3px
 }
+.accordion-toggle{
+    border:1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 1em;
+}
+.filter-form{position:relative;}
 .filter-form .form-control {
     border-radius: 2px;
     box-shadow: none;
@@ -444,13 +452,13 @@ footer{
     }
 /* ==============RESPONSIVE============ */
 @media screen and ( max-width: 1355px){
-    #admin .accordion-inner .list-icon{
+    #admin .list-icon{
         width: 35%;
         text-align: center;
     }
 }
 @media screen and ( max-width: 892px){
-    #admin .accordion-inner .list-icon{
+    #admin .list-icon{
         width: 25%;
     }
 }
@@ -464,7 +472,7 @@ footer{
     
 }
 @media screen and ( max-width: 768px){
-    #admin .accordion-inner .list-icon{
+    #admin .list-icon{
         width: 20%;
     }
     .search-form .input-group {

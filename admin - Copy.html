@@ -14,7 +14,7 @@
 
     <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="js/mainScript.js"></script>
+
 </head>
 
 <body>
@@ -40,41 +40,26 @@
         <div class="admin-container">
             <div class="admin-content">
                 <div class="admin-body">
-                    <!-- accordin group -->
                     <div class="accordion-group">
-                        <div class="accordion-heading accordion-top">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#awaiting">
-                                <span class="text-box"> Awaiting Approval (0)</span>
-                            </a>
+                        <h3 class="text-box accordion-toggle">Awaiting Approval (0)</h3>
+                        <div class="accordion">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
+                            <button class="btn-approve" type="submit">Approve</button>
                         </div>
-                        <div id="awaiting" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
-                                <button class="btn-approve" type="submit">Approve</button>
-                            </div>
-                        </div>
-                    </div><!-- accordin group -->
+                    </div>
+                    
                     <div class="accordion-group">
-                        <div class="accordion-heading">
-                            
-                            <a class="accordion-toggle allowed" data-toggle="collapse" data-parent="#leftMenu" href="#allowed">
-                                <div class="panel-heading">
-                                    <div class="nopadding col col-md-4 col-sm-4 col-xs-12">
-                                        <span class="panel-title">Allowed (3)</span>
-                                    </div>
-                                      <div class="clearfix"></div>
+                        <!-- accordin content -->
+                        <h3 class="accordion-toggle accordion-title-allowed">Allowed (3)</h3>
+                        <div class="accordion accordion-allowed">
+                                <div class="filter-form">
+                                    <select class="form-control search-time">
+                                        <option value="" selected disabled>Sort by time posted</option>
+                                        <option value="serie-0">1:00</option>
+                                        <option value="serie-1">2:00</option>
+                                    </select>
                                 </div>
-                            </a>
-                            <div class="nopadding col col-md-8 col-sm-8 col-xs-12 filter-form text-right">
-                                <select class="form-control search-time">
-                                    <option value="" selected disabled>Sort by time posted</option>
-                                    <option value="serie-0">1:00</option>
-                                    <option value="serie-1">2:00</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div id="allowed" class="accordion-body collapse">
-                            <div class="accordion-inner">
+                                
                                 <table class="table table-bordered">
                                     <tbody>
                                       <tr>
@@ -128,24 +113,21 @@
                                             </ul>
                                         </td>
                                       </tr>
+                                      <div class="clearfix"></div>
                                     </tbody>
+
                                 </table>
-                            </div>
-                        </div>
-                    </div><!-- accordin group -->
-                    <!-- accordin group -->
+                                
+
+                        </div><!-- /.accordin content -->
+                    </div>
+                    
                     <div class="accordion-group">
-                        <div class="accordion-heading accordion-top">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#blocked">
-                                <span class="text-box"> Blocked (0)</span>
-                            </a>
+                        <h3 class="text-box accordion-toggle">Blocked (0)</h3>
+                        <div class="accordion">
+                            <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p> 
                         </div>
-                        <div id="blocked" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p> when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
-                            </div>
-                        </div>
-                    </div><!-- accordin group -->
+                    </div>
                 </div>
             </div>
         </div><!-- / ADMIN CONTAINER -->
@@ -156,5 +138,6 @@
         </div> 
     </footer> 
 </div>
+<script src="js/mainScript.js"></script>
 </body>
 </html>
