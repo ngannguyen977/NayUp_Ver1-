@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>NayUp</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font/Flaticon/flaticon.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="main-content bg-grey">
+    <header>
+        <nav class="nav-admin navbar navbar-default" role="navigation">
+            <div class="nav-admin-container">
+                <div class="nav-left pull-left">
+                    <span>
+                        <a class="navbar-brand" href="#">nayup</a>
+                    </span>
+                    <span class="hidden-xs"><a href="">Dashboard</a></span>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#"><img src="images/icon/question.svg" alt=""/></a>
+                        </li>
+                        <li><a href="#"><img src="images/icon/bell.svg" alt=""/></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="hidden-xs dropdown-toggle" data-toggle="dropdown">Tran Chau
+                            <b class="caret"></b></a>
+                            <a href="#" class="hidden-lg hidden-md hidden-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icon/profile.svg"></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Setting account</a></li>
+                                <li class="dash-nav-item"><a href="">Change account</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- breadcrumbs -->
+    <section class="breadcrumb-section">
+        <div class="nopadding col-md-6 col-sm-6 col-xs-12 pul-left">
+            <ul class="breadcrumbs breadcrumbs_type5">
+              <li class="breadcrumbs-item"><a  style="font-size:24px;" href="#0" class="breadcrumbs-element">HRTech</a></li>&nbsp;&nbsp;>&nbsp;&nbsp;
+              <li class="breadcrumbs-item"><a href="#0" class="breadcrumbs-element">Agenda</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="nopadding col-md-6 col-sm-6 col-xs-12 pul-right"><p>22 June 2017(+7:00)&nbsp;&nbsp;NVMGroup</p></div>
+    </section><!-- /. breadcrumbs -->
+    <section id="hrtech">
+
+        <div class="hrtech-container">
+            <div class="">
+                
+                 <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-4 col-sm-4"><h2 class="text-title" style="text-align: right">Add Session<br></div>
+                        <div class="col-md-5 col-sm-5"></div>
+                    </div>
+                    
+                    <fieldset>
+                        <!-- Section type -->
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-4 control-label" for="session type">Session type</label>
+                            <div class="col-md-4 col-sm-6">
+                                <select id="" name="" class="form-control">
+                                    <option value="1">Q&A</option>
+                                    <option value="2">As soon as possible</option>
+                                    <option value="3">1 to 3 months</option>
+                                    <option value="4">3 to 6 months</option>
+                                    <option value="">6+ months</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Name-->
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-4 control-label" for="name">Name</label>
+                            <div class="col-md-5 col-sm-6">
+                                <input id="" name="" type="text" placeholder="" class="form-control input-md">
+
+                            </div>
+                        </div>
+
+                        <!-- Start time-->
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-4 control-label" for="start name">Start time</label>
+                            <div class="col-md-3 col-sm-3">
+                                <input id="" name="" type="text" placeholder="9:00 / 7 July 2017" class="form-control input-md">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                           <label class="col-md-4 col-sm-4 control-label" for="end time">End time</label>
+                            <div class="col-md-5 col-sm-5 pul-left">
+                                <input type="checkbox" id="c"><label for="c">by starting time of next session</label>
+                            </div>
+                        </div>
+                        <!-- End time-->
+                        <div class="form-group">
+                            <div class="col-md-4 col-sm-4 control-label"></div>
+                            <div class="col-md-2 col-sm-3">
+                                <input id="" name="end time" type="text" placeholder="9:00 / 7 July 2017" class="form-control input-md">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-4 col-xs-12 control-label">Options</label>
+                            <div class="col-md-5 col-sm-5 pul-left">
+                                 <!--Checkbox-->
+                                <ul class="option-list">
+                                    <li>
+                                        <input type="checkbox" id="c1"><label for="c1">Comments</label>
+                                    </li>
+                                    <li>
+                                       <input type="checkbox" id="c2"><label for="c2">Anonymous responses</label> 
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="c3"><label for="c3">Responses can be viewed after Q&A has ended</label>
+                                    </li>
+                                    <div class="clearfix"></div>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <div class="col-md-4 col-sm-4"></div>
+                            <div class="col-md-5 col-sm-6">
+                                <div class="pul-right">
+                                   <button type="button" class="btn  btn-dasboard-stroke btn-cancel">CANCEL</button>
+                                    <button type="button" class="btn btn-dasboard btn-continue">CONTINUE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/mainScript.js"></script>
+</body>
+</html>

@@ -144,3 +144,9 @@ $(".accordion-group .accordion-title").click(function() {
         $accordion.slideUp();
     }
 });
+// button drop down
+$('.agenda-content-button .button-dropdown').hover(function() {
+      $(this).find('.dropdown').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown').stop(true, true).delay(200).fadeOut(500);
+});

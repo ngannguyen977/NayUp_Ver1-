@@ -9,7 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="font/Flaticon/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
@@ -50,57 +50,111 @@
     </header>
     <!-- breadcrumbs -->
     <section class="breadcrumb-section">
-        <div class="pull-left">
+        <div class="nopadding col-md-6 col-sm-6 col-xs-12 pul-left">
             <ul class="breadcrumbs breadcrumbs_type5">
-              <li class="breadcrumbs-item"><a href="#0" class="breadcrumbs-element">HRTech</a></li>>
+              <li class="breadcrumbs-item"><a  style="font-size:24px;" href="#0" class="breadcrumbs-element">HRTech</a></li>&nbsp;&nbsp;>&nbsp;&nbsp;
               <li class="breadcrumbs-item"><a href="#0" class="breadcrumbs-element">Agenda</a></li>
             </ul>
             <div class="clearfix"></div>
         </div>
-        <div class="pull-right"><p>22 June 2017(+7:00)&nbsp;&nbsp;NVMGroup</p></div>
+        <div class="nopadding col-md-6 col-sm-6 col-xs-12 pul-right"><p>22 June 2017(+7:00)&nbsp;&nbsp;NVMGroup</p></div>
     </section><!-- /. breadcrumbs -->
     <section id="agenda">
         <div class="agenda-container">
-            <h2>Agenda</h2>
+            <h2 class="text-title">Agenda</h2>
             <div class="agenda-content">
-                <div class="col-md-3 agenda-content-left">9:00-10:00/7 July</div>
-                <div class="col-md-9">
-                    <div class="agenda-content-top">
-                        <p class="pull-left">Bellow is Agenda for your event in order of time</p>
-                        <p class="pull-right"><button type="submit" class="btn btn-dasboard btn-add">ADD SESSION</button></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    
-                    <div class="agenda-content-right">
-                        <div class="col-md-8">
-                            <div class="agenda-content-info">
+                <div class="agenda-content-top">
+                    <p class="col-md-3"></p>
+                    <p class="nopadding col-md-6 pul-left agenda-text-info">Bellow is Agenda for your event in order of time</p>
+                    <p class="col-md-3 pul-right nopadding pul-right">
+                        <button type="submit" class="btn btn-dasboard btn-add">ADD SESSION</button>
+                    </p>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- agenda content group -->
+                <div class="agenda-content-group">
+                    <div class="col-md-3 col-sm-3 col-xs-3 agenda-content-left">9:00-10:00/7 July</div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 agenda-content-right">
+                        <div class="col-md-8 col-sm-6 col-xs-6 agenda-content-info">
+                            <div class="">
                                 <span class="flaticon-interface"></span>&nbsp;&nbsp;
                                 <span class="text-large">HRTech Q&A</span>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="agenda-content-button">
-                                  <!-- Btn-->
-                                  <button class="btn-more"><span>Account Settings</span>
+                        <div class="nopadding col-md-4 col-sm-6 col-xs-6 agenda-content-button">
+                            <div class="">
+                                <div class="button-dropdown">
+                                    <a href="#" class="button btn-large btn-more">
+                                        <span class="circle"></span>
+                                        <span class="circle"></span>
+                                        <span class="circle"></span>
+                                    </a>
                                     <ul class="dropdown">
-                                      <li class="active"><a href="#">Profile Information</a></li>
-                                      <li><a href="#">Change Password</a></li>
-                                      <li><a href="https://codepen.io/pro">Become <b>PRO</b></a></li>
-                                      <li><a href="#">Help</a></li>
-                                      <li><a href="#">Log Out</a></li>
+                                      <li><a href="#" class="dropdown-link">Reopen</a></li>
+                                      <li><a href="#" class="dropdown-link">Hide</a></li>
+                                      <li><a href="#" class="dropdown-link">Duplicate</a></li>
                                     </ul>
-                                  </button>
-
-                                
+                                </div>
+                                <div class="button-dropdown">
+                                    <span href="#" class="button btn-large btn-run">Run as</span>
+                                        <a class="button toggle">More</a>
+                                        <ul class="dropdown">
+                                          <li><a href="#" class="dropdown-link">Audience Web App</a></li>
+                                          <li><a href="#" class="dropdown-link">Project Panel</a></li>
+                                          <li><a href="#" class="dropdown-link">Admin Panel</a></li>
+                                        </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                </div>
+                    <div class="clearfix"></div>
+                </div><!-- /. agenda content group -->
+                <!-- agenda content group -->
+                <div class="agenda-content-group">
+                    <div class="col-md-3 col-sm-3 col-xs-3 agenda-content-left">9:00-10:00/7 July</div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 agenda-content-right">
+                        <div class="col-md-8 col-sm-6 col-xs-6 agenda-content-info">
+                            <div class="">
+                                <span class="flaticon-interface"></span>&nbsp;&nbsp;
+                                <span class="text-large">HRTech Poll</span>
+                            </div>
+                        </div>
+                        <div class="nopadding col-md-4 col-sm-6 col-xs-6 agenda-content-button">
+                            <div class="">
+                                <div class="button-dropdown">
+                                    <a href="#" class="button btn-large btn-more">
+                                        <span class="circle"></span>
+                                        <span class="circle"></span>
+                                        <span class="circle"></span>
+                                    </a>
+                                    <ul class="dropdown">
+                                      <li><a href="#" class="dropdown-link">Reopen</a></li>
+                                      <li><a href="#" class="dropdown-link">Hide</a></li>
+                                      <li><a href="#" class="dropdown-link">Duplicate</a></li>
+                                    </ul>
+                                </div>
+                                <div class="button-dropdown">
+                                    <span href="#" class="button btn-large btn-run">Run as</span>
+                                        <a class="button toggle">More</a>
+                                        <ul class="dropdown">
+                                          <li><a href="#" class="dropdown-link">Audience Web App</a></li>
+                                          <li><a href="#" class="dropdown-link">Project Panel</a></li>
+                                          <li><a href="#" class="dropdown-link">Admin Panel</a></li>
+                                        </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /. agenda content group -->
             </div>
             <div class="clearfix"></div>
         </div>
     </section>
 </div>
+<script src="js/mainScript.js"></script>
 </body>
 </html>
